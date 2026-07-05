@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Stopwatch</title>
+    <!-- FontAwesome Premium Icons Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header class="app-header">
+            <i class="fa-solid fa-stopwatch app-icon"></i>
+            <h1>CHRONO</h1>
+            <p class="subtitle">Precision Timer Application</p>
+        </header>
+
+        <!-- Stopwatch Display -->
+        <section class="display-container">
+            <div id="display" class="timer-display">00:00:00<span class="ms">.00</span></div>
+        </section>
+
+        <!-- Controls -->
+        <section class="controls-container">
+            <button id="startPauseBtn" class="btn btn-start" title="Start">
+                <i class="fa-solid fa-play"></i> Start
+            </button>
+            <button id="lapBtn" class="btn btn-lap" title="Record Lap" disabled>
+                <i class="fa-solid fa-flag"></i> Lap
+            </button>
+            <button id="resetBtn" class="btn btn-reset" title="Reset Timer" disabled>
+                <i class="fa-solid fa-rotate-right"></i> Reset
+            </button>
+        </section>
+
+        <!-- Laps Section -->
+        <section class="laps-container" id="lapsWrapper" style="display: none;">
+            <div class="laps-header">
+                <span>Lap</span>
+                <span>Split Time</span>
+                <span>Total Time</span>
+            </div>
+            <ul id="lapsList" class="laps-list"></ul>
+        </section>
+    </main>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
